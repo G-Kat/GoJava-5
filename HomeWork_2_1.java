@@ -137,6 +137,7 @@ public class HomeWork_2_1 {
         modulus(array1);
         secondLargest(array);
         secondLargest(array1);
+
     }
 
 }
