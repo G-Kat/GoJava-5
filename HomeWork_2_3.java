@@ -4,17 +4,17 @@ package Module_2;
  * Created by guzya on 06.11.2016.
  */
 public class HomeWork_2_3 {
-    static void atm (int[] balances, String[] ownerNames, double withdrawal){
+    static void atm(int[] balances, String[] ownerNames, double withdrawal) {
 
-        for(int i=0; i<balances.length; i++) {
-            double newBalance = balances[i]-withdrawal*1.05;
+        for (int i = 0; i < balances.length; i++) {
+            double newBalance = balances[i] - withdrawal * 1.05;
             String name = ownerNames[i];
-                if (newBalance >= 0) {
-        System.out.println(name + " " + withdrawal + " " + newBalance);
-    } else {
-        System.out.println(name + " NO");
-    }
-}
+            if (newBalance >= 0) {
+                System.out.println(name + " " + withdrawal + " " + newBalance);
+            } else {
+                System.out.println(name + " NO");
+            }
+        }
     }
 
     public static void main(String[] args) {

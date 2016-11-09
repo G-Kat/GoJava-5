@@ -4,14 +4,13 @@ package Module_2;
  * Created by guzya on 06.11.2016.
  */
 public class HomeWork_2_2 {
-    static void atm (int balance, int withdrawal){
-        double commission = withdrawal*0.05;
-        double newBalance = balance-withdrawal-commission;
+    static void atm(int balance, int withdrawal) {
+        double commission = withdrawal * 0.05;
+        double newBalance = balance - withdrawal - commission;
 
-        if(newBalance>=0){
+        if (newBalance >= 0) {
             System.out.println("OK " + commission + " " + newBalance);
-        }
-        else {
+        } else {
             System.out.println("NO");
         }
     }
