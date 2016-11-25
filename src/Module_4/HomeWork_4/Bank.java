@@ -1,20 +1,18 @@
 package Module_4.HomeWork_4;
 
-import java.util.Currency;
-
 /**
  * Created by guzya on 20.11.2016.
  */
 public abstract class Bank {
     private long id;
     private String bankCountry;
-    private Currency currency;
+    private Module_4.HomeWork_4.Currency currency;
     private int numberOfEmployees;
     private double avrSalaryOfEmployee;
     private long rating;
     private long totalCapital;
 
-    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public Bank(long id, String bankCountry, Module_4.HomeWork_4.Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         this.id = id;
         this.bankCountry = bankCountry;
         this.currency = currency;
@@ -40,7 +38,7 @@ public abstract class Bank {
         this.bankCountry = bankCountry;
     }
 
-    public Currency getCurrency() {
+    public Module_4.HomeWork_4.Currency getCurrency() {
         return currency;
     }
 
@@ -89,7 +87,7 @@ public abstract class Bank {
     abstract int getCommission(int summ);
 
     double moneyPaidMonthlyForSalary() {
-        return avrSalaryOfEmployee * numberOfEmployees; // не самая точная бухгалтерия, просто для примера. Взято из обсуждения на форуме.
+        return avrSalaryOfEmployee * numberOfEmployees;
     }
 }
 //    Домашнее задание №4.1
