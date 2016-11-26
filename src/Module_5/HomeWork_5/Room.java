@@ -22,6 +22,27 @@ public class Room {
         this.cityName = cityName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Room room = (Room) o;
+
+        if (price != room.price) return false;
+        if (persons != room.persons) return false;
+        return cityName != null ? cityName.equals(room.cityName) : room.cityName == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = price;
+        result = 31 * result + persons;
+        result = 31 * result + (cityName != null ? cityName.hashCode() : 0);
+        return result;
+    }
+
     public long getId() {
         return id;
     }
@@ -87,3 +108,6 @@ public class Room {
 //        String hotelName
 //        String cityName
 //        Generate getters and setters. And create constructor with all fields.
+//
+//        TASK 2
+//        Override equals and hashCode methods. Rooms are equal when price, persons and cityName are equal.
