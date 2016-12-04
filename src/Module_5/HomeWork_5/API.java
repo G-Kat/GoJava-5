@@ -11,3 +11,8 @@ public interface API {
 
 //        Create API interface which contains one method
 //        Room[] findRooms(int price, int persons, String city, String hotel)
+//
+//        TASK 4
+//
+//        Create three implementations of API called: BookingComAPI, TripAdvisorAPI, GoogleAPI.
+// Every implementation has global variable Room[] rooms which must be initialized in empty constructor with 5 differentRooms.

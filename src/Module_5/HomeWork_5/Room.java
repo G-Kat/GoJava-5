@@ -13,6 +13,7 @@ public class Room {
     private String hotelName;
     private String cityName;
 
+
     public Room(long id, int price, int persons, Date dateAvailableFrom, String hotelName, String cityName) {
         this.id = id;
         this.price = price;
@@ -41,6 +42,18 @@ public class Room {
         result = 31 * result + persons;
         result = 31 * result + (cityName != null ? cityName.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", price=" + price +
+                ", persons=" + persons +
+                ", dateAvailableFrom=" + dateAvailableFrom +
+                ", hotelName='" + hotelName + '\'' +
+                ", cityName='" + cityName + '\'' +
+                '}';
     }
 
     public long getId() {
@@ -90,6 +103,8 @@ public class Room {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
+
+
 }
 // You need to create part of the System that can find hotel rooms for booking and save it to DataBase.
 // The architecture is: class Room which represent room entity that is used in system.
